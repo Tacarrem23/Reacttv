@@ -1,22 +1,19 @@
-import "./episodes.css";
+   // EpisodeDetails.jsx
+   import React from 'react';
 
-/** Details about the selected episode */
-export default function EpisodeDetails({ episode }) {
-  if (!episode) {
-    return (
-      <section className="episode-details">
-        <h2>Episode Details</h2>
-        <p>Select an episode to learn more.</p>
-      </section>
-    );
-  }
+   function EpisodeDetails({ episode }) {
+       if (!episode) {
+           return <p>Select an episode to view details.</p>;
+       }
 
-  return (
-    <section className="episode-details">
-      <h2>Episode {episode.number}</h2>
-      <h3>{episode.title}</h3>
-      <p>{episode.description}</p>
-      <button>Watch now</button>
-    </section>
-  );
-}
+       return (
+           <div>
+               <h3>{episode.title}</h3>
+               <p>{episode.description}</p>
+               {/* Add more details as needed */}
+           </div>
+       );
+   }
+
+   export default EpisodeDetails;
+   
